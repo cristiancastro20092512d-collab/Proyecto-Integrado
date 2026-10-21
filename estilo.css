@@ -83,3 +83,9 @@
     background-color: #f1d58f;
     border-color: #f1d58f;
 }
+
+#btn-iniciar-sesion {
+    background-color: #003821;
+    border-color: #003821;
+    color: white;
+}
