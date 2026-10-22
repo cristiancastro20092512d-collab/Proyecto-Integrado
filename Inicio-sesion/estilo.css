@@ -1,0 +1,210 @@
+:root {
+    --sv-verde-oscuro: #283618;
+    --sv-verde: #3A5A40;
+    --sv-verde-medio: #588157;
+    --sv-claro: #DAD7CD;
+    --sv-dorado: #E9C46A;
+}
+
+.navbar-solvanta {
+    background-color: var(--sv-verde);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+    padding-block: .5rem;
+}
+
+.navbar-solvanta .nav-link {
+    color: var(--sv-claro);
+    font-weight: 500;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    transition: background-color .2s, color .2s;
+}
+
+.navbar-solvanta .nav-link:hover,
+.navbar-solvanta .nav-link:focus {
+    background-color: var(--sv-verde-medio);
+    color: #fff;
+}
+
+.navbar-solvanta .nav-link.active {
+    color: var(--sv-dorado);
+    background-color: rgba(255, 255, 255, .08);
+}
+
+.navbar-solvanta .nav-link img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.navbar-solvanta .dropdown-menu {
+    background-color: var(--sv-verde);
+    border: 1px solid var(--sv-verde-medio);
+}
+
+.navbar-solvanta .dropdown-item {
+    color: var(--sv-claro);
+}
+
+.navbar-solvanta .dropdown-item:hover {
+    background-color: var(--sv-verde-medio);
+    color: #fff;
+}
+
+.navbar-solvanta .dropdown-divider {
+    border-color: var(--sv-verde-medio);
+}
+
+.navbar-solvanta .navbar-toggler {
+    border-color: var(--sv-claro);
+}
+
+.navbar-solvanta .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(218,215,205,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-solvanta .form-control:focus {
+    border-color: var(--sv-dorado);
+    box-shadow: 0 0 0 .2rem rgba(233, 196, 106, .25);
+}
+
+.navbar-solvanta .btn-buscar {
+    background-color: var(--sv-dorado);
+    border-color: var(--sv-dorado);
+    color: var(--sv-verde-oscuro);
+    font-weight: 600;
+}
+
+.navbar-solvanta .btn-buscar:hover {
+    background-color: #f1d58f;
+    border-color: #f1d58f;
+}
+
+#btn-iniciar-sesion {
+    background-color: #003821;
+    border-color: #003821;
+    color: white;
+}
+
+/* Estilos para el formulario de inicio de sesión */
+
+:root {
+    --sv-verde-oscuro: #283618;
+    --sv-verde: #3A5A40;
+    --sv-verde-medio: #588157;
+    --sv-dorado: #E9C46A;
+}
+
+/* Tu clase para ocultar (con !important para que nada la pise) */
+
+.oculto {
+    display: none !important;
+}
+
+.pagina-login {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--sv-verde-oscuro), var(--sv-verde) 55%, var(--sv-verde-medio));
+}
+
+.tarjeta-login {
+    width: 100%;
+    max-width: 420px;
+    background: #fff;
+    border-radius: 1.25rem;
+    padding: 2.25rem 2rem;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .3);
+}
+
+.tarjeta-login .logo {
+    display: block;
+    width: 150px;
+    margin: 0 auto 1.5rem;
+}
+
+.tarjeta-login h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--sv-verde-oscuro);
+    margin-bottom: .35rem;
+}
+
+.tarjeta-login .subtitulo {
+    text-align: center;
+    color: #666;
+    font-size: .95rem;
+    margin-bottom: 1.5rem;
+}
+
+.tarjeta-login .form-label {
+    font-weight: 600;
+    font-size: .9rem;
+    color: var(--sv-verde-oscuro);
+}
+
+.tarjeta-login .form-control {
+    padding: .65rem .9rem;
+    border-radius: .6rem;
+}
+
+.tarjeta-login .form-control:focus {
+    border-color: var(--sv-verde-medio);
+    box-shadow: 0 0 0 .2rem rgba(88, 129, 87, .25);
+}
+
+.btn-solvanta {
+    width: 100%;
+    background-color: var(--sv-verde);
+    border-color: var(--sv-verde);
+    color: #fff;
+    font-weight: 600;
+    padding: .7rem;
+    border-radius: .6rem;
+    transition: background-color .2s;
+}
+
+.btn-solvanta:hover {
+    background-color: var(--sv-verde-oscuro);
+    border-color: var(--sv-verde-oscuro);
+    color: var(--sv-dorado);
+}
+
+/* Botón que parece enlace */
+.enlace-vista {
+    background: none;
+    border: 0;
+    padding: 0;
+    color: var(--sv-verde-medio);
+    font-weight: 600;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+.enlace-vista:hover {
+    color: var(--sv-verde-oscuro);
+    text-decoration: underline;
+}
+
+.pie-tarjeta {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: .9rem;
+    color: #666;
+}
+
+.mensaje-error {
+    background: #fdecea;
+    color: #8a1f17;
+    border-radius: .6rem;
+    padding: .6rem .9rem;
+    font-size: .9rem;
+    margin-bottom: 1rem;
+}
