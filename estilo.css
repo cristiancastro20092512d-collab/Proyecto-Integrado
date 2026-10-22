@@ -89,3 +89,275 @@
     border-color: #003821;
     color: white;
 }
+
+/*Pagina de inicio*/
+
+.hero-solvanta {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: flex-end;
+    /* el texto queda abajo, sobre el difuminado */
+    background: url("img/solar-energy-5622969_640.jpg") center / cover no-repeat;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Degradado: transparente arriba, verde oscuro abajo */
+.hero-solvanta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(40, 54, 24, 0) 30%,
+            rgba(40, 54, 24, .65) 65%,
+            rgba(40, 54, 24, .95) 100%);
+}
+
+.hero-contenido {
+    position: relative;
+    /* para quedar por encima del degradado */
+    z-index: 1;
+    padding-block: 4rem;
+}
+
+.hero-solvanta .etiqueta {
+    display: inline-block;
+    background-color: #E9C46A;
+    color: #283618;
+    font-weight: 600;
+    font-size: .85rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: .3rem .8rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-solvanta h1 {
+    font-size: clamp(2rem, 5vw, 3.75rem);
+    font-weight: 700;
+    line-height: 1.1;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, .4);
+}
+
+.hero-solvanta p.lead {
+    max-width: 38rem;
+    color: #DAD7CD;
+}
+
+.btn-hero {
+    background-color: #E9C46A;
+    border-color: #E9C46A;
+    color: #283618;
+    font-weight: 600;
+    padding: .7rem 1.6rem;
+    border-radius: 2rem;
+}
+
+.btn-hero:hover {
+    background-color: #f1d58f;
+    border-color: #f1d58f;
+}
+
+.btn-hero-outline {
+    border: 2px solid #DAD7CD;
+    color: #DAD7CD;
+    font-weight: 600;
+    padding: .7rem 1.6rem;
+    border-radius: 2rem;
+}
+
+.btn-hero-outline:hover {
+    background-color: #DAD7CD;
+    color: #283618;
+}
+
+/*--Diseño informacion--*/
+
+:root {
+    --sv-verde-oscuro: #283618;
+    --sv-verde: #3A5A40;
+    --sv-verde-medio: #588157;
+    --sv-claro: #DAD7CD;
+    --sv-crema: #F4F1E8;
+    --sv-dorado: #E9C46A;
+}
+
+/* Títulos de sección */
+.serviciosSolvanta h2,
+.comoFunciona h2 {
+    text-align: center;
+    color: var(--sv-verde-oscuro);
+    font-weight: 700;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    margin-bottom: 3rem;
+}
+
+.serviciosSolvanta h2::after,
+.comoFunciona h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    margin: .8rem auto 0;
+    background: var(--sv-dorado);
+    border-radius: 2px;
+}
+
+/* ---------- 1. Beneficios y cifras ---------- */
+.FranjaDebeneificios {
+    background: var(--sv-verde);
+    color: var(--sv-claro);
+    padding: 3rem 0;
+}
+
+.FranjaDebeneificios ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.FranjaDebeneificios li {
+    padding: 1rem 1.5rem;
+}
+
+.FranjaDebeneificios h3 {
+    color: var(--sv-dorado);
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: .5rem;
+}
+
+.FranjaDebeneificios p {
+    margin: 0;
+    font-size: .95rem;
+    opacity: .9;
+}
+
+@media (min-width: 992px) {
+    .FranjaDebeneificios li+li {
+        border-left: 1px solid rgba(218, 215, 205, .25);
+    }
+}
+
+/* ---------- 2. Servicios ---------- */
+.serviciosSolvanta {
+    background: var(--sv-crema);
+    padding: 5rem 0;
+}
+
+.serviciosSolvanta ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.serviciosSolvanta .tarjeta {
+    height: 100%;
+    background: #fff;
+    border-radius: 1rem;
+    border-top: 4px solid var(--sv-verde-medio);
+    padding: 1.75rem;
+    box-shadow: 0 4px 14px rgba(40, 54, 24, .08);
+    transition: transform .25s, box-shadow .25s;
+}
+
+.serviciosSolvanta .tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(40, 54, 24, .15);
+}
+
+.serviciosSolvanta h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--sv-verde-oscuro);
+}
+
+.serviciosSolvanta h3 img {
+    width: 28px;
+    height: 28px;
+    box-sizing: content-box;
+    padding: 14px;
+    background: var(--sv-crema);
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.serviciosSolvanta h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--sv-verde-medio);
+    margin-bottom: .75rem;
+}
+
+.serviciosSolvanta p {
+    color: #555;
+    font-size: .95rem;
+    margin: 0;
+}
+
+/* ---------- 3. Cómo funciona ---------- */
+.comoFunciona {
+    background: #fff;
+    padding: 5rem 0;
+}
+
+.comoFunciona ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: paso;
+}
+
+.comoFunciona li {
+    position: relative;
+    text-align: center;
+    counter-increment: paso;
+}
+
+.comoFunciona li::before {
+    content: counter(paso);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.25rem;
+    border-radius: 50%;
+    background: var(--sv-verde);
+    color: var(--sv-dorado);
+    font-size: 1.5rem;
+    font-weight: 700;
+    box-shadow: 0 0 0 6px rgba(88, 129, 87, .2);
+    position: relative;
+    z-index: 1;
+}
+
+.comoFunciona h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--sv-verde-oscuro);
+}
+
+.comoFunciona p {
+    color: #555;
+    font-size: .95rem;
+}
+
+/* Línea que une los pasos (solo en pantallas grandes) */
+@media (min-width: 992px) {
+    .comoFunciona li:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 30px;
+        left: calc(50% + 45px);
+        width: calc(100% - 90px);
+        border-top: 2px dashed var(--sv-verde-medio);
+    }
+}
