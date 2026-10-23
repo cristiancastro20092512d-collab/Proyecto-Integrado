@@ -88,6 +88,15 @@
     background-color: #003821;
     border-color: #003821;
     color: white;
+    margin-left: 30px;
+}
+
+@media (max-width: 991.98px) {
+    #navbarSupportedContent #btn-iniciar-sesion {
+        width: 100%;
+        margin: .75rem 0 .5rem;
+        text-align: center;
+    }
 }
 
 /* Estilos para la sección de contacto */
