@@ -80,8 +80,10 @@
                 <p class="subtitulo">Ingresa a tu cuenta de Solvanta</p>
 
                 <div class="mensaje-error oculto" id="errorLogin" role="alert"></div>
+                <!-- NUEVO -->
+                <div class="mensaje-ok oculto" id="okRegistro" role="status"></div>
 
-                <form action="/login" method="post">
+                <form id="formularioLogin">
                     <div class="mb-3">
                         <label for="loginCorreo" class="form-label">Correo electrónico</label>
                         <input type="email" class="form-control" id="loginCorreo" name="correo"
@@ -108,7 +110,10 @@
                 <h2>Crea tu cuenta</h2>
                 <p class="subtitulo">Empieza tu camino hacia la energía solar</p>
 
-                <form action="/registro" method="post">
+                <!-- NUEVO -->
+                <div class="mensaje-error oculto" id="errorRegistro" role="alert"></div>
+
+                <form id="formularioRegistro">
                     <div class="mb-3">
                         <label for="regNombre" class="form-label">Nombre completo</label>
                         <input type="text" class="form-control" id="regNombre" name="nombre" placeholder="Tu nombre"
