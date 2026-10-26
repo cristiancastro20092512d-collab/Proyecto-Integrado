@@ -1,7 +1,7 @@
 const highlights = [
-  { img: "../../img/h1.jpg", label: "Instalaciones", n: 24 },
-  { img: "../../img/h2.jpg", label: "Granjas solares", n: 12 },
-  { img: "../../img/cover.jpg", label: "Proyectos", n: 38 },
+  { img: "img/h1.jpg", label: "Instalaciones", n: 24 },
+  { img: "img/h2.jpg", label: "Granjas solares", n: 12 },
+  { img: "img/cover.jpg", label: "Proyectos", n: 38 },
 ];
 
 const clients = [

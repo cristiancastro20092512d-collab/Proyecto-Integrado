@@ -42,6 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     formularioLogin.addEventListener('submit', function (evento) {
         evento.preventDefault();
-        window.location.href = '../Pagina-Inicio.html';
+        window.location.href = 'Pagina-Inicio.html';
     });
 });
