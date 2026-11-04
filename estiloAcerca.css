@@ -98,3 +98,31 @@
         text-align: center;
     }
 }
+
+/* Estilos para la sección conocenos */
+.principal_MV {
+    display: flex;
+}
+
+.mision{
+    background-color:#003821;
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 45%;
+}
+.vision{
+    background-color:#003821;
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 45%;
+}
+
+.mision h2, .vision h2 {
+    color: var(--sv-dorado);
+    margin-bottom: 1rem;
+}
+
+.mision p, .vision p {
+    color: var(--sv-claro);
+    font-size: 1.1rem;
+}
