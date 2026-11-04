@@ -30,7 +30,8 @@
     color: #fff;
 }
 
-.navbar-solvanta .nav-link.active {
+.navbar-solvanta .nav-link.active,
+.navbar-solvanta .nav-link.show {
     color: var(--sv-dorado);
     background-color: rgba(255, 255, 255, .08);
 }
@@ -101,61 +102,149 @@
 
 /* Estilos para la sección de objetivos y metas */
 
-.metas {
-    padding: 4rem 0;
+/* ---------- Hero ---------- */
+.hero-objetivos {
+    background: linear-gradient(135deg, #283618, #3A5A40);
+    color: #fff;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.hero-objetivos small {
+    color: #E9C46A;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.hero-objetivos h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    margin-top: .4rem;
+}
+
+.hero-objetivos h1 span {
+    color: #E9C46A;
+}
+
+.hero-objetivos p {
+    color: #DAD7CD;
+    max-width: 36rem;
+    margin: 1rem auto 0;
+}
+
+/* ---------- Bloques ---------- */
+.bloque {
+    padding: 4.5rem 0;
     background: #fff;
 }
 
-/* Título en dos tonos */
-.metas .encabezado {
-    text-align: center;
-    margin-bottom: 3rem;
+.bloque:nth-of-type(even) {
+    background: #F4F1E8;
 }
 
-.metas .encabezado small {
-    display: block;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #7a8c7a;
-}
-
-.metas .encabezado h2 {
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
+.bloque h3 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
     font-weight: 800;
     color: #283618;
+    margin-bottom: 2rem;
 }
 
-.metas .encabezado h2 span,
-.metas h3 span {
+.bloque h3 span {
     color: #588157;
 }
 
-/* Cada bloque */
-.meta-bloque {
-    margin-bottom: 4rem;
+/* ---------- Tarjetas numeradas ---------- */
+.lista {
+    counter-reset: obj;
 }
 
-.meta-bloque:last-child {
-    margin-bottom: 0;
+.objetivo {
+    position: relative;
+    background: #F4F1E8;
+    border: 1px solid #e4e8e0;
+    border-radius: 1rem;
+    padding: 1.25rem 1.25rem 1.1rem 4.5rem;
+    margin-bottom: 1rem;
+    transition: transform .2s, box-shadow .2s;
 }
 
-.meta-bloque h3 {
-    font-size: 1.6rem;
+.bloque:nth-of-type(even) .objetivo {
+    background: #fff;
+}
+
+.objetivo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(40, 54, 24, .12);
+}
+
+.objetivo::before {
+    counter-increment: obj;
+    content: counter(obj);
+    position: absolute;
+    left: 1.25rem;
+    top: 1.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background: #3A5A40;
+    color: #E9C46A;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.objetivo h5 {
+    font-size: 1.05rem;
     font-weight: 700;
     color: #283618;
-    line-height: 1.2;
+    margin-bottom: .5rem;
 }
 
-.meta-bloque p {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: #222;
-    margin-top: 1rem;
+.objetivo p {
+    margin: 0 0 .4rem;
+    font-size: .95rem;
+    line-height: 1.65;
+    color: #444;
 }
 
-.meta-bloque img {
+.objetivo strong {
+    color: #3A5A40;
+}
+
+/* ---------- Imagen fija ---------- */
+.imagen-sticky {
+    position: sticky;
+    top: 100px;
+}
+
+.imagen-sticky img {
     width: 100%;
-    height: 340px;
+    height: 480px;
     object-fit: cover;
     border-radius: 1.2rem;
+    box-shadow: 0 12px 30px rgba(40, 54, 24, .25);
+}
+
+.etiqueta-img {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    background: #E9C46A;
+    color: #283618;
+    font-weight: 700;
+    font-size: .85rem;
+    padding: .35rem .9rem;
+    border-radius: 2rem;
+}
+
+@media (max-width: 991px) {
+    .imagen-sticky {
+        position: static;
+    }
+
+    .imagen-sticky img {
+        height: 260px;
+    }
 }
