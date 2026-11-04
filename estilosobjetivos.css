@@ -248,3 +248,17 @@
         height: 260px;
     }
 }
+
+.separadorpequeño {
+    border: 5px solid #003821;
+    height: 4px;
+    background: #003821;
+    margin: 2rem 0;
+}
+
+.separadormediano {
+    border: 8px solid #588157;
+    height: 6px;
+    background: #588157;
+    margin: 2px;
+}
