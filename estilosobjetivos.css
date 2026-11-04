@@ -1,0 +1,161 @@
+:root {
+    --sv-verde-oscuro: #283618;
+    --sv-verde: #3A5A40;
+    --sv-verde-medio: #588157;
+    --sv-claro: #DAD7CD;
+    --sv-dorado: #E9C46A;
+}
+
+.navbar-solvanta {
+    background-color: var(--sv-verde);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+    padding-block: .5rem;
+}
+
+.navbar-solvanta .nav-link {
+    color: var(--sv-claro);
+    font-weight: 500;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    transition: background-color .2s, color .2s;
+}
+
+.navbar-solvanta .nav-link:hover,
+.navbar-solvanta .nav-link:focus {
+    background-color: var(--sv-verde-medio);
+    color: #fff;
+}
+
+.navbar-solvanta .nav-link.active {
+    color: var(--sv-dorado);
+    background-color: rgba(255, 255, 255, .08);
+}
+
+.navbar-solvanta .nav-link img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.navbar-solvanta .dropdown-menu {
+    background-color: var(--sv-verde);
+    border: 1px solid var(--sv-verde-medio);
+}
+
+.navbar-solvanta .dropdown-item {
+    color: var(--sv-claro);
+}
+
+.navbar-solvanta .dropdown-item:hover {
+    background-color: var(--sv-verde-medio);
+    color: #fff;
+}
+
+.navbar-solvanta .dropdown-divider {
+    border-color: var(--sv-verde-medio);
+}
+
+.navbar-solvanta .navbar-toggler {
+    border-color: var(--sv-claro);
+}
+
+.navbar-solvanta .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(218,215,205,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-solvanta .form-control:focus {
+    border-color: var(--sv-dorado);
+    box-shadow: 0 0 0 .2rem rgba(233, 196, 106, .25);
+}
+
+.navbar-solvanta .btn-buscar {
+    background-color: var(--sv-dorado);
+    border-color: var(--sv-dorado);
+    color: var(--sv-verde-oscuro);
+    font-weight: 600;
+}
+
+.navbar-solvanta .btn-buscar:hover {
+    background-color: #f1d58f;
+    border-color: #f1d58f;
+}
+
+#btn-iniciar-sesion {
+    background-color: #003821;
+    border-color: #003821;
+    color: white;
+    margin-left: 30px;
+}
+
+@media (max-width: 991.98px) {
+    #navbarSupportedContent #btn-iniciar-sesion {
+        width: 100%;
+        margin: .75rem 0 .5rem;
+        text-align: center;
+    }
+}
+
+/* Estilos para la sección de objetivos y metas */
+
+.metas {
+    padding: 4rem 0;
+    background: #fff;
+}
+
+/* Título en dos tonos */
+.metas .encabezado {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.metas .encabezado small {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #7a8c7a;
+}
+
+.metas .encabezado h2 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 800;
+    color: #283618;
+}
+
+.metas .encabezado h2 span,
+.metas h3 span {
+    color: #588157;
+}
+
+/* Cada bloque */
+.meta-bloque {
+    margin-bottom: 4rem;
+}
+
+.meta-bloque:last-child {
+    margin-bottom: 0;
+}
+
+.meta-bloque h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #283618;
+    line-height: 1.2;
+}
+
+.meta-bloque p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #222;
+    margin-top: 1rem;
+}
+
+.meta-bloque img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 1.2rem;
+}
