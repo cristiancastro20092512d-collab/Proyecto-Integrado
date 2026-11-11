@@ -113,6 +113,7 @@
 }
 .a_cerrado{
     color: white;
+    text-decoration: none;
 }
 .Cerrado:hover{
     background-color: #E9C46A;
@@ -120,6 +121,7 @@
 }
 .a_cerrado:hover{
     color: #000000;
+    text-decoration: none;
 }
 
 /*Pagina de inicio*/
