@@ -100,6 +100,28 @@
     }
 }
 
+/*Botón Cerrar sesión*/
+
+.Cerrado{
+    background-color: #292929;
+    color: white;
+    border-radius: 6px;
+    margin: clamp(.8rem, 2vw, 1rem);
+    padding: clamp(.5rem, 1vw, .7rem);
+    font-size: clamp(.6rem, 2vw, 1rem);
+    cursor: pointer;
+}
+.a_cerrado{
+    color: white;
+}
+.Cerrado:hover{
+    background-color: #E9C46A;
+    color: #000000;
+}
+.a_cerrado:hover{
+    color: #000000;
+}
+
 /* Estilos para la sección de contacto */
 
 body {
