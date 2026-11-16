@@ -126,9 +126,18 @@
 
 
 .container {
-    max-width: 1200px;
+    max-height: 800px;
     margin: 0 auto;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.contenido, .contenido2, .contenido3 {
+    background-color: var(--sv-claro);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 .h1 {
     font-size: clamp(1.5rem, 2vw, 2rem);
