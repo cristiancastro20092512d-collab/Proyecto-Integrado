@@ -1,0 +1,196 @@
+:root {
+    --sv-verde-oscuro: #283618;
+    --sv-verde: #3A5A40;
+    --sv-verde-medio: #588157;
+    --sv-claro: #DAD7CD;
+    --sv-dorado: #E9C46A;
+}
+
+.navbar-solvanta {
+    background: var(--sv-verde);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
+    padding-block: .55rem;
+}
+
+.navbar-solvanta .navbar-nav {
+    gap: .15rem;
+}
+
+.navbar-solvanta .nav-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--sv-claro);
+    font-weight: 500;
+    font-size: .98rem;
+    padding: .55rem .9rem;
+    border-radius: .5rem;
+    transition: color .2s, background-color .2s;
+}
+
+.navbar-solvanta .nav-link img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.navbar-solvanta .nav-link:hover,
+.navbar-solvanta .nav-link:focus {
+    color: #fff;
+    background: rgba(255, 255, 255, .08);
+}
+
+.navbar-solvanta .nav-link.active {
+    color: var(--sv-dorado);
+    background: transparent;
+}
+
+@media (min-width: 992px) {
+    .navbar-solvanta .nav-link.active::after {
+        content: "";
+        position: absolute;
+        left: .9rem;
+        right: .9rem;
+        bottom: .1rem;
+        height: 3px;
+        border-radius: 2px;
+        background: var(--sv-dorado);
+    }
+}
+
+.navbar-solvanta .dropdown-menu {
+    background: var(--sv-verde);
+    border: 1px solid var(--sv-verde-medio);
+    border-radius: .75rem;
+    padding: .4rem;
+    margin-top: .5rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .3);
+}
+
+.navbar-solvanta .dropdown-item {
+    color: var(--sv-claro);
+    border-radius: .5rem;
+    padding: .5rem .9rem;
+}
+
+.navbar-solvanta .dropdown-item:hover,
+.navbar-solvanta .dropdown-item:focus,
+.navbar-solvanta .dropdown-item.active {
+    background: var(--sv-verde-medio);
+    color: #fff;
+}
+
+.navbar-solvanta .dropdown-divider {
+    border-color: var(--sv-verde-medio);
+}
+
+.navbar-solvanta .navbar-toggler {
+    border-color: rgba(218, 215, 205, .5);
+}
+
+.navbar-solvanta .navbar-toggler:focus {
+    box-shadow: 0 0 0 .2rem rgba(233, 196, 106, .3);
+}
+
+.acciones-nav {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+@media (min-width: 992px) {
+    .acciones-nav {
+        padding-left: 1.25rem;
+        border-left: 1px solid rgba(218, 215, 205, .25);
+    }
+}
+
+.buscador-solvi {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(218, 215, 205, .35);
+    border-radius: 2rem;
+    padding: .25rem .3rem .25rem .9rem;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.buscador-solvi:focus-within {
+    border-color: var(--sv-dorado);
+    box-shadow: 0 0 0 .2rem rgba(233, 196, 106, .25);
+}
+
+.buscador-solvi i {
+    color: var(--sv-dorado);
+}
+
+.buscador-solvi input {
+    width: 160px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: .92rem;
+}
+
+.buscador-solvi input::placeholder {
+    color: var(--sv-claro);
+    opacity: .8;
+}
+
+.buscador-solvi button {
+    background: var(--sv-dorado);
+    color: var(--sv-verde-oscuro);
+    border: 0;
+    border-radius: 2rem;
+    padding: .35rem .9rem;
+    font-weight: 600;
+    font-size: .85rem;
+    transition: background-color .2s;
+}
+
+.buscador-solvi button:hover {
+    background: #f1d58f;
+}
+
+.btn-salir {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    color: var(--sv-claro);
+    border: 1px solid rgba(218, 215, 205, .5);
+    border-radius: 2rem;
+    padding: .45rem 1rem;
+    font-size: .9rem;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color .2s, color .2s, border-color .2s;
+}
+
+.btn-salir:hover,
+.btn-salir:focus {
+    background: var(--sv-dorado);
+    border-color: var(--sv-dorado);
+    color: var(--sv-verde-oscuro);
+}
+
+@media (max-width: 991px) {
+    .acciones-nav {
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(218, 215, 205, .25);
+    }
+
+    .buscador-solvi input {
+        width: 100%;
+        flex: 1;
+    }
+
+    .btn-salir {
+        justify-content: center;
+    }
+}

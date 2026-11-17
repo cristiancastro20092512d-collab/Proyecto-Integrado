@@ -6,53 +6,80 @@
     --sv-dorado: #E9C46A;
 }
 
+/* ---------- Barra ---------- */
 .navbar-solvanta {
-    background-color: var(--sv-verde);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
-    padding-block: .5rem;
+    background: var(--sv-verde);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
+    padding-block: .55rem;
+}
+
+/* ---------- Enlaces ---------- */
+.navbar-solvanta .navbar-nav {
+    gap: .15rem;
 }
 
 .navbar-solvanta .nav-link {
-    color: var(--sv-claro);
-    font-weight: 500;
-    font-size: 1.05rem;
+    position: relative;
     display: flex;
     align-items: center;
     gap: .5rem;
-    padding: .5rem 1rem;
+    color: var(--sv-claro);
+    font-weight: 500;
+    font-size: .98rem;
+    padding: .55rem .9rem;
     border-radius: .5rem;
-    transition: background-color .2s, color .2s;
+    transition: color .2s, background-color .2s;
+}
+
+.navbar-solvanta .nav-link img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
 }
 
 .navbar-solvanta .nav-link:hover,
 .navbar-solvanta .nav-link:focus {
-    background-color: var(--sv-verde-medio);
     color: #fff;
+    background: rgba(255, 255, 255, .08);
 }
 
-.navbar-solvanta .nav-link.active,
-.navbar-solvanta .nav-link.show {
+/* Activo: barra dorada debajo */
+.navbar-solvanta .nav-link.active {
     color: var(--sv-dorado);
-    background-color: rgba(255, 255, 255, .08);
+    background: transparent;
 }
 
-.navbar-solvanta .nav-link img {
-    width: 26px;
-    height: 26px;
-    object-fit: contain;
+@media (min-width: 992px) {
+    .navbar-solvanta .nav-link.active::after {
+        content: "";
+        position: absolute;
+        left: .9rem;
+        right: .9rem;
+        bottom: .1rem;
+        height: 3px;
+        border-radius: 2px;
+        background: var(--sv-dorado);
+    }
 }
 
+/* ---------- Dropdown ---------- */
 .navbar-solvanta .dropdown-menu {
-    background-color: var(--sv-verde);
+    background: var(--sv-verde);
     border: 1px solid var(--sv-verde-medio);
+    border-radius: .75rem;
+    padding: .4rem;
+    margin-top: .5rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .3);
 }
 
 .navbar-solvanta .dropdown-item {
     color: var(--sv-claro);
+    border-radius: .5rem;
+    padding: .5rem .9rem;
 }
 
 .navbar-solvanta .dropdown-item:hover {
-    background-color: var(--sv-verde-medio);
+    background: var(--sv-verde-medio);
     color: #fff;
 }
 
@@ -60,68 +87,120 @@
     border-color: var(--sv-verde-medio);
 }
 
+/* ---------- Botón hamburguesa ---------- */
 .navbar-solvanta .navbar-toggler {
-    border-color: var(--sv-claro);
+    border-color: rgba(218, 215, 205, .5);
 }
 
-.navbar-solvanta .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(218,215,205,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+.navbar-solvanta .navbar-toggler:focus {
+    box-shadow: 0 0 0 .2rem rgba(233, 196, 106, .3);
 }
 
-.navbar-solvanta .form-control:focus {
+/* ---------- Acciones (Solvi + cerrar sesión) ---------- */
+.acciones-nav {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+@media (min-width: 992px) {
+
+    /* Separador vertical entre enlaces y acciones */
+    .acciones-nav {
+        padding-left: 1.25rem;
+        border-left: 1px solid rgba(218, 215, 205, .25);
+    }
+}
+
+/* Buscador de Solvi */
+.buscador-solvi {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(218, 215, 205, .35);
+    border-radius: 2rem;
+    padding: .25rem .3rem .25rem .9rem;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.buscador-solvi:focus-within {
     border-color: var(--sv-dorado);
     box-shadow: 0 0 0 .2rem rgba(233, 196, 106, .25);
 }
 
-.navbar-solvanta .btn-buscar {
-    background-color: var(--sv-dorado);
+.buscador-solvi i {
+    color: var(--sv-dorado);
+}
+
+.buscador-solvi input {
+    width: 160px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: .92rem;
+}
+
+.buscador-solvi input::placeholder {
+    color: var(--sv-claro);
+    opacity: .8;
+}
+
+.buscador-solvi button {
+    background: var(--sv-dorado);
+    color: var(--sv-verde-oscuro);
+    border: 0;
+    border-radius: 2rem;
+    padding: .35rem .9rem;
+    font-weight: 600;
+    font-size: .85rem;
+    transition: background-color .2s;
+}
+
+.buscador-solvi button:hover {
+    background: #f1d58f;
+}
+
+/* Cerrar sesión */
+.btn-salir {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    color: var(--sv-claro);
+    border: 1px solid rgba(218, 215, 205, .5);
+    border-radius: 2rem;
+    padding: .45rem 1rem;
+    font-size: .9rem;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color .2s, color .2s, border-color .2s;
+}
+
+.btn-salir:hover {
+    background: var(--sv-dorado);
     border-color: var(--sv-dorado);
     color: var(--sv-verde-oscuro);
-    font-weight: 600;
 }
 
-.navbar-solvanta .btn-buscar:hover {
-    background-color: #f1d58f;
-    border-color: #f1d58f;
-}
-
-#btn-iniciar-sesion {
-    background-color: #003821;
-    border-color: #003821;
-    color: white;
-    margin-left: 30px;
-}
-
-@media (max-width: 991.98px) {
-    #navbarSupportedContent #btn-iniciar-sesion {
-        width: 100%;
-        margin: .75rem 0 .5rem;
-        text-align: center;
+/* ---------- Celular ---------- */
+@media (max-width: 991px) {
+    .acciones-nav {
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(218, 215, 205, .25);
     }
-}
 
-/*Botón Cerrar sesión*/
+    .buscador-solvi input {
+        width: 100%;
+        flex: 1;
+    }
 
-.Cerrado{
-    background-color: #292929;
-    color: white;
-    border-radius: 6px;
-    margin: clamp(.6rem, 2vw, 1rem);
-    padding: clamp(.5rem, 2vw, .7rem);
-    font-size: clamp(1rem, 2vw, 1rem);
-    cursor: pointer;
-}
-.a_cerrado{
-    color: white;
-    text-decoration: none;
-}
-.Cerrado:hover{
-    background-color: #E9C46A;
-    color: #000000;
-}
-.a_cerrado:hover{
-    color: #000000;
-    text-decoration: none;
+    .btn-salir {
+        justify-content: center;
+    }
 }
 
 /* Estilos para la sección de paneles de sol */
