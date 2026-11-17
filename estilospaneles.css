@@ -100,6 +100,30 @@
     }
 }
 
+/*Botón Cerrar sesión*/
+
+.Cerrado{
+    background-color: #292929;
+    color: white;
+    border-radius: 6px;
+    margin: clamp(.6rem, 2vw, 1rem);
+    padding: clamp(.5rem, 2vw, .7rem);
+    font-size: clamp(1rem, 2vw, 1rem);
+    cursor: pointer;
+}
+.a_cerrado{
+    color: white;
+    text-decoration: none;
+}
+.Cerrado:hover{
+    background-color: #E9C46A;
+    color: #000000;
+}
+.a_cerrado:hover{
+    color: #000000;
+    text-decoration: none;
+}
+
 /* Estilos para la sección de paneles de sol */
 
 .oculto {
