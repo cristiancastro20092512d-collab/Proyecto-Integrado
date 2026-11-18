@@ -1,0 +1,5 @@
+node_modules/
+Solvi.env
+.env
+.env.*
+!.env.example

@@ -6,10 +6,25 @@
     --sv-dorado: #E9C46A;
 }
 
+html {
+    scrollbar-gutter: stable;
+}
+
+@supports not (scrollbar-gutter: stable) {
+    html {
+        overflow-y: scroll;
+    }
+}
+
 .navbar-solvanta {
     background: var(--sv-verde);
     box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
     padding-block: .55rem;
+}
+
+.navbar-solvanta .navbar-brand img {
+    width: 120px;
+    height: auto;
 }
 
 .navbar-solvanta .navbar-nav {
@@ -97,6 +112,7 @@
     display: flex;
     align-items: center;
     gap: .75rem;
+    position: relative;
 }
 
 @media (min-width: 992px) {
@@ -155,6 +171,50 @@
     background: #f1d58f;
 }
 
+.buscador-solvi button:disabled {
+    cursor: wait;
+    opacity: .7;
+}
+
+.solvi-chat-panel {
+    position: absolute;
+    top: calc(100% + .75rem);
+    right: 0;
+    z-index: 1080;
+    width: min(24rem, calc(100vw - 2rem));
+    max-height: min(60vh, 30rem);
+    overflow-y: auto;
+    padding: .9rem 1rem;
+    border: 1px solid rgba(40, 54, 24, .2);
+    border-radius: 1rem;
+    background: #fff;
+    color: var(--sv-verde-oscuro);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .2);
+}
+
+.solvi-chat-panel[hidden] {
+    display: none;
+}
+
+.solvi-chat-conversation {
+    display: grid;
+    gap: .65rem;
+}
+
+.solvi-chat-message {
+    margin: 0;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.solvi-chat-message-user strong {
+    color: var(--sv-verde);
+}
+
+.solvi-chat-message-assistant strong {
+    color: #80621f;
+}
+
 .btn-salir {
     display: inline-flex;
     align-items: center;
@@ -188,6 +248,12 @@
     .buscador-solvi input {
         width: 100%;
         flex: 1;
+    }
+
+    .solvi-chat-panel {
+        position: static;
+        width: 100%;
+        max-height: 45vh;
     }
 
     .btn-salir {
