@@ -124,59 +124,187 @@
     text-decoration: none;
 }
 
-/*Estilos para la sección estrategias*/
+/* Estrategias Solvanta */
+.body {
+    min-height: 100vh;
+    background: var(--sv-claro);
+    color: var(--sv-verde-oscuro);
+}
+
+.hero-estrategias {
+    padding: clamp(4rem, 8vw, 6rem) 1rem;
+    color: #fff;
+    text-align: center;
+    background:
+        radial-gradient(circle at 15% 15%, rgba(233, 196, 106, .14), transparent 25%),
+        linear-gradient(135deg, var(--sv-verde-oscuro), var(--sv-verde) 60%, var(--sv-verde-medio));
+}
+
+.hero-estrategias .etiqueta {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: .3rem .8rem;
+    color: var(--sv-verde-oscuro);
+    background: var(--sv-dorado);
+    border-radius: 2rem;
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
 
 .titulo_estrategias {
-    text-align: center;
-    font-size: clamp(1.2rem, 3vw, 4rem);
-    font-weight: 700;
-    color: var(--sv-verde);
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    text-decoration: underline;
-    transition: transform .4s, box-shadow .2s;
-}
-.titulo_estrategias:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.16);
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 800;
+    line-height: 1.12;
 }
 
-.container {
-    margin-bottom: 16px;
-    padding: clamp(1rem, 2vw, 2rem);
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-.contenido, .contenido2, .contenido3 {
-    background-color: var(--sv-verde-oscuro);
-    padding: clamp(1rem, 2vw, 2rem);
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    position: relative;
-    border: 1px solid #588157;
-    border-radius: 1rem;
-    margin-bottom: clamp(5px, 2vw, 10px);
-    transition: transform .4s, box-shadow .2s;
-}
-.contenido:hover, .contenido2:hover, .contenido3:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.16);
-}
-.h1 {
-    font-size: clamp(1.5rem, 2vw, 2rem);
-    font-weight: 700;
+.titulo_estrategias span {
     color: var(--sv-dorado);
-    text-align: center;
-    margin-bottom: 1rem;
 }
-.p {
-    font-size: clamp(.7rem, 2vw, 1.25rem);
+
+.hero-estrategias p {
+    max-width: 38rem;
+    margin: 1rem auto 0;
     color: var(--sv-claro);
-    text-align: center;
-    margin-bottom: 1rem;
+    font-size: 1.05rem;
 }
-.body {
-    background-color: var(--sv-claro);
+
+.seccion-estrategias {
+    padding: clamp(2.5rem, 6vw, 4.5rem) 0;
+    background: var(--sv-claro);
+}
+
+.seccion-estrategias .container {
+    max-width: 1200px;
+}
+
+.estrategias-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.estrategia-card {
+    display: flex;
+    min-width: 0;
+    height: 100%;
+    flex-direction: column;
+    padding: clamp(1.4rem, 3vw, 2rem);
+    background: #fff;
+    border: 1px solid rgba(40, 54, 24, .1);
+    border-top: 4px solid var(--sv-verde-medio);
+    border-radius: 1rem;
+    box-shadow: 0 6px 20px rgba(40, 54, 24, .08);
+    transition: transform .25s, box-shadow .25s, border-color .25s;
+}
+
+.estrategia-card:hover {
+    transform: translateY(-5px);
+    border-top-color: var(--sv-dorado);
+    box-shadow: 0 14px 28px rgba(40, 54, 24, .14);
+}
+
+.estrategia-cabecera {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    margin-bottom: 1.25rem;
+}
+
+.estrategia-icono {
+    display: grid;
+    width: 2.8rem;
+    height: 2.8rem;
+    flex: 0 0 auto;
+    place-items: center;
+    color: var(--sv-verde);
+    background: #e8eddf;
+    border-radius: .8rem;
+    font-size: 1.25rem;
+}
+
+.estrategia-etiqueta {
+    color: var(--sv-verde-medio);
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+}
+
+.estrategia-card h2 {
+    margin-bottom: .85rem;
+    color: var(--sv-verde-oscuro);
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.estrategia-card p {
+    margin: 0;
+    color: #50534c;
+    font-size: .97rem;
+    line-height: 1.75;
+}
+
+@media (max-width: 991.98px) {
+    .estrategias-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .estrategia-card:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .estrategias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .estrategia-card:last-child {
+        grid-column: auto;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .navbar-solvanta .navbar-nav .nav-link {
+        gap: .3rem;
+        padding-inline: .4rem;
+        font-size: .9rem;
+    }
+
+    .navbar-solvanta .navbar-nav .nav-link img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .navbar-solvanta .buscador-solvi input {
+        width: 130px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .acciones-nav {
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(218, 215, 205, .25);
+    }
+
+    .buscador-solvi input {
+        width: 100%;
+        flex: 1;
+    }
+
+    .btn-salir {
+        justify-content: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .estrategia-card {
+        transition: none;
+    }
 }
