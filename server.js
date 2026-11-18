@@ -271,6 +271,6 @@ http.createServer((request, response) => {
             response.destroy();
         }
     });
-}).listen(PORT, '127.0.0.1', () => {
-    console.log(`Solvanta está disponible en http://localhost:${PORT}`);
+}).listen(PORT, '0.0.0.0', () => {
+    console.log(`Solvanta está escuchando en el puerto ${PORT}`);
 });
