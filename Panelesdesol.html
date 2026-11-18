@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -90,6 +90,51 @@
             <h2>Paneles Solares</h2>
             <p class="intro">Tecnología fotovoltaica de última generación para cada necesidad.</p>
 
+            <div class="precios-controles">
+                <label for="pais-precios">Precios orientativos en:
+                    <select id="pais-precios" aria-label="Selecciona el país para ver los precios en su moneda">
+                        <option value="GT" data-moneda="GTQ" data-locale="es-GT" selected>Guatemala (GTQ)</option>
+                        <option value="MX" data-moneda="MXN" data-locale="es-MX">México (MXN)</option>
+                        <option value="US" data-moneda="USD" data-locale="en-US">Estados Unidos (USD)</option>
+                        <option value="CA" data-moneda="CAD" data-locale="en-CA">Canadá (CAD)</option>
+                        <option value="SV" data-moneda="USD" data-locale="es-SV">El Salvador (USD)</option>
+                        <option value="HN" data-moneda="HNL" data-locale="es-HN">Honduras (HNL)</option>
+                        <option value="NI" data-moneda="NIO" data-locale="es-NI">Nicaragua (NIO)</option>
+                        <option value="CR" data-moneda="CRC" data-locale="es-CR">Costa Rica (CRC)</option>
+                        <option value="PA" data-moneda="PAB" data-locale="es-PA">Panamá (PAB)</option>
+                        <option value="EC" data-moneda="USD" data-locale="es-EC">Ecuador (USD)</option>
+                        <option value="DO" data-moneda="DOP" data-locale="es-DO">República Dominicana (DOP)</option>
+                        <option value="CO" data-moneda="COP" data-locale="es-CO">Colombia (COP)</option>
+                        <option value="CL" data-moneda="CLP" data-locale="es-CL">Chile (CLP)</option>
+                        <option value="AR" data-moneda="ARS" data-locale="es-AR">Argentina (ARS)</option>
+                        <option value="PE" data-moneda="PEN" data-locale="es-PE">Perú (PEN)</option>
+                        <option value="BR" data-moneda="BRL" data-locale="pt-BR">Brasil (BRL)</option>
+                        <option value="UY" data-moneda="UYU" data-locale="es-UY">Uruguay (UYU)</option>
+                        <option value="PY" data-moneda="PYG" data-locale="es-PY">Paraguay (PYG)</option>
+                        <option value="BO" data-moneda="BOB" data-locale="es-BO">Bolivia (BOB)</option>
+                        <option value="VE" data-moneda="VES" data-locale="es-VE">Venezuela (VES)</option>
+                        <option value="ES" data-moneda="EUR" data-locale="es-ES">España (EUR)</option>
+                        <option value="GB" data-moneda="GBP" data-locale="en-GB">Reino Unido (GBP)</option>
+                        <option value="FR" data-moneda="EUR" data-locale="fr-FR">Francia (EUR)</option>
+                        <option value="DE" data-moneda="EUR" data-locale="de-DE">Alemania (EUR)</option>
+                        <option value="JP" data-moneda="JPY" data-locale="ja-JP">Japón (JPY)</option>
+                        <option value="CN" data-moneda="CNY" data-locale="zh-CN">China (CNY)</option>
+                        <option value="AU" data-moneda="AUD" data-locale="en-AU">Australia (AUD)</option>
+                        <option value="NZ" data-moneda="NZD" data-locale="en-NZ">Nueva Zelanda (NZD)</option>
+                        <option value="CH" data-moneda="CHF" data-locale="de-CH">Suiza (CHF)</option>
+                        <option value="TR" data-moneda="TRY" data-locale="tr-TR">Turquía (TRY)</option>
+                        <option value="IN" data-moneda="INR" data-locale="en-IN">India (INR)</option>
+                        <option value="KR" data-moneda="KRW" data-locale="ko-KR">Corea del Sur (KRW)</option>
+                        <option value="AE" data-moneda="AED" data-locale="ar-AE">Emiratos Árabes Unidos (AED)</option>
+                        <option value="ZA" data-moneda="ZAR" data-locale="en-ZA">Sudáfrica (ZAR)</option>
+                        <option value="RU" data-moneda="RUB" data-locale="ru-RU">Rusia (RUB)</option>
+                    </select>
+                </label>
+                <p id="aviso-precios" class="aviso-precios" role="status" aria-live="polite">
+                    Rangos orientativos, no son una cotización oficial; el precio final depende del proyecto.
+                </p>
+            </div>
+
             <div class="filtros">
                 <button class="activo" data-filtro="todos">Todos</button>
                 <button data-filtro="eficientes">Más eficientes</button>
@@ -108,6 +153,10 @@
                         </div>
                         <h3>Módulos TOPCon</h3>
                         <div class="dato">23% <small>eficiencia</small></div>
+                        <p class="precio" data-precio-min="110" data-precio-max="160" data-precio-unidad="por panel">
+                            <strong>Precio estimado: <span class="precio-valor"></span></strong>
+                            <small class="precio-unidad"></small>
+                        </p>
                         <p>Celdas de última generación que producen más energía en menos espacio.</p>
                         <ul>
                             <li>Mayor rendimiento con poca luz</li>
@@ -126,6 +175,10 @@
                         </div>
                         <h3>Módulos bifaciales</h3>
                         <div class="dato">600 W <small>por panel</small></div>
+                        <p class="precio" data-precio-min="140" data-precio-max="220" data-precio-unidad="por panel">
+                            <strong>Precio estimado: <span class="precio-valor"></span></strong>
+                            <small class="precio-unidad"></small>
+                        </p>
                         <p>Captan luz por ambas caras para aumentar la generación total del sistema.</p>
                         <ul>
                             <li>Hasta 25% más de energía</li>
@@ -144,6 +197,10 @@
                         </div>
                         <h3>Paneles All Black</h3>
                         <div class="dato">22% <small>eficiencia</small></div>
+                        <p class="precio" data-precio-min="130" data-precio-max="200" data-precio-unidad="por panel">
+                            <strong>Precio estimado: <span class="precio-valor"></span></strong>
+                            <small class="precio-unidad"></small>
+                        </p>
                         <p>Diseño totalmente negro que se integra con el techo de tu hogar.</p>
                         <ul>
                             <li>Estética limpia y moderna</li>
@@ -162,6 +219,17 @@
                         </div>
                         <h3>Sistemas para empresas</h3>
                         <div class="dato">+100 kW <small>por instalación</small></div>
+                        <p class="precio" data-precio-min="85000" data-precio-max="150000"
+                            data-precio-unidad="por sistema de 100 kW o más">
+                            <strong>Equipo estimado: <span class="precio-valor"></span></strong>
+                            <small class="precio-unidad"></small>
+                        </p>
+                        <p class="precio precio-instalacion" data-precio-min="18000" data-precio-max="35000"
+                            data-precio-unidad="de instalación estimada para un sistema de 100 kW">
+                            <strong>Instalación industrial estimada: <span class="precio-valor"></span></strong>
+                            <small class="precio-unidad"></small>
+                        </p>
+                        <p class="precio-gratis">Para comercios pequeños (sistemas de 3–10 kW), la instalación es gratis. Equipos y materiales se cotizan aparte.</p>
                         <p>Soluciones a gran escala para reducir costos operativos.</p>
                         <ul>
                             <li>Estructuras para techos industriales</li>
@@ -180,6 +248,11 @@
                         </div>
                         <h3>Kits para el hogar</h3>
                         <div class="dato">3–10 kW <small>sistemas</small></div>
+                        <p class="precio" data-precio-min="3500" data-precio-max="12000"
+                            data-precio-unidad="por kit de 3–10 kW">
+                            <strong>Precio estimado: <span class="precio-valor"></span></strong>
+                            <small class="precio-unidad"></small>
+                        </p>
                         <p>Paquetes completos listos para instalar según el consumo de tu familia.</p>
                         <ul>
                             <li>Paneles, inversor y estructura</li>
@@ -198,6 +271,10 @@
                         </div>
                         <h3>Optimizadores y microinversores</h3>
                         <div class="dato">+25% <small>producción</small></div>
+                        <p class="precio" data-precio-min="90" data-precio-max="180" data-precio-unidad="por unidad">
+                            <strong>Precio estimado: <span class="precio-valor"></span></strong>
+                            <small class="precio-unidad"></small>
+                        </p>
                         <p>Cada panel trabaja a su máximo aunque otro tenga sombra.</p>
                         <ul>
                             <li>Monitoreo panel por panel</li>

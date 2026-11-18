@@ -225,6 +225,42 @@
     text-align: center;
 }
 
+/* País y precios estimados */
+.precios-controles {
+    max-width: 680px;
+    margin: 1.75rem auto 0;
+    padding: 1rem 1.25rem;
+    text-align: center;
+    color: #DAD7CD;
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(218, 215, 205, .2);
+    border-radius: .9rem;
+}
+
+.precios-controles label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: .65rem;
+    font-weight: 600;
+}
+
+.precios-controles select {
+    max-width: 100%;
+    padding: .5rem .85rem;
+    color: #283618;
+    background: #F4F1E8;
+    border: 1px solid #E9C46A;
+    border-radius: .5rem;
+}
+
+.aviso-precios {
+    margin: .65rem 0 0;
+    font-size: .82rem;
+    color: #DAD7CD;
+}
+
 /* Filtros */
 .filtros {
     display: flex;
@@ -303,6 +339,41 @@
     font-size: .8rem;
     font-weight: 400;
     color: #777;
+}
+
+.card-panel .precio {
+    margin: .85rem 0 .45rem;
+    padding: .75rem .85rem;
+    color: #283618;
+    background: #e8eddf;
+    border-left: 3px solid #588157;
+    border-radius: .35rem;
+    font-size: .9rem;
+}
+
+.card-panel .precio strong {
+    display: block;
+    color: #283618;
+    font-weight: 700;
+}
+
+.card-panel .precio-unidad {
+    display: block;
+    margin-top: .15rem;
+    color: #555;
+    font-size: .8rem;
+}
+
+.card-panel .precio-instalacion {
+    background: #f2ead8;
+    border-left-color: #b28a37;
+}
+
+.card-panel .precio-gratis {
+    margin: .35rem 0 .6rem;
+    color: #3A5A40;
+    font-size: .82rem;
+    font-weight: 600;
 }
 
 .card-panel p {

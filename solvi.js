@@ -36,6 +36,42 @@ document.querySelectorAll('.buscador-solvi').forEach(function (form) {
         return content;
     }
 
+    function getPricingContext() {
+        var selector = document.getElementById('pais-precios');
+        if (!selector) {
+            return null;
+        }
+
+        var opcion = selector.selectedOptions[0];
+        var lines = [
+            'País seleccionado: ' + opcion.textContent.trim(),
+            'Moneda usada para mostrar precios: ' + selector.dataset.monedaActual,
+            'Tipo de cambio mostrado: ' + selector.dataset.tasaActual + ' ' +
+                selector.dataset.monedaActual + ' por USD.',
+            'Los importes son estimaciones orientativas, no una cotización confirmada.'
+        ];
+
+        document.querySelectorAll('.card-col').forEach(function (card) {
+            var nombre = card.querySelector('h3');
+            var rangos = card.querySelectorAll('.precio[data-precio-min]');
+            if (!nombre || rangos.length === 0) {
+                return;
+            }
+
+            var precios = Array.from(rangos).map(function (rango) {
+                return (rango.querySelector('strong').textContent.trim() + ' ' +
+                    rango.querySelector('.precio-unidad').textContent.trim()).trim();
+            });
+            var notaGratis = card.querySelector('.precio-gratis');
+            lines.push(nombre.textContent.trim() + ': ' + precios.join('; ') + '.');
+            if (notaGratis) {
+                lines.push(notaGratis.textContent.trim());
+            }
+        });
+
+        return lines.join('\n');
+    }
+
     form.addEventListener('submit', async function (event) {
         event.preventDefault();
         var text = input.value.trim();
@@ -58,7 +94,10 @@ document.querySelectorAll('.buscador-solvi').forEach(function (form) {
                 response = await fetch('/api/chat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ messages: messages })
+                    body: JSON.stringify({
+                        messages: messages,
+                        pricingContext: getPricingContext()
+                    })
                 });
             } catch {
                 throw new Error('No se pudo conectar con Node. En la terminal ejecuta «npm start» y abre http://localhost:3000 (no uses Live Server ni abras el HTML directamente).');
