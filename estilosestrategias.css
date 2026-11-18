@@ -126,30 +126,57 @@
 
 /*Estilos para la sección estrategias*/
 
+.titulo_estrategias {
+    text-align: center;
+    font-size: clamp(1.2rem, 3vw, 4rem);
+    font-weight: 700;
+    color: var(--sv-verde);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-decoration: underline;
+    transition: transform .4s, box-shadow .2s;
+}
+.titulo_estrategias:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.16);
+}
+
 .container {
-    max-height: 800px;
-    margin: 0 auto;
-    padding: 2rem;
+    margin-bottom: 16px;
+    padding: clamp(1rem, 2vw, 2rem);
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 .contenido, .contenido2, .contenido3 {
-    background-color: var(--sv-claro);
-    padding: 2rem;
+    background-color: var(--sv-verde-oscuro);
+    padding: clamp(1rem, 2vw, 2rem);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: relative;
+    border: 1px solid #588157;
+    border-radius: 1rem;
+    margin-bottom: clamp(5px, 2vw, 10px);
+    transition: transform .4s, box-shadow .2s;
+}
+.contenido:hover, .contenido2:hover, .contenido3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.16);
 }
 .h1 {
     font-size: clamp(1.5rem, 2vw, 2rem);
     font-weight: 700;
-    color: var(--sv-verde-oscuro);
+    color: var(--sv-dorado);
     text-align: center;
     margin-bottom: 1rem;
 }
 .p {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    color: var(--sv-verde-oscuro);
+    font-size: clamp(.7rem, 2vw, 1.25rem);
+    color: var(--sv-claro);
     text-align: center;
     margin-bottom: 1rem;
+}
+.body {
+    background-color: var(--sv-claro);
 }
